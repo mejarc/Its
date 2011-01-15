@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+
+ 
+  <title>My Slides (1)</title> 
+  <link rel="stylesheet" type="text/css" media="screen, projection, print" href="template_files/slidy.css">
+  <script src="template_files/showdown.js"></script>
+  <script src="template_files/slidy.js"></script>
+</head><body class=" single_slide" style="visibility: visible; font-size: 18pt;"><div class=" slidy_toc hidden"><div class=" toc-heading">Table of Contents</div>1. <a href="#%281%29">My Slides(1)</a></div>
+<script type="text/markdown">
+<!--
+... Your Slides in Markdown ...
+-->
+</script>
+<script>
+var scripts = document.getElementsByTagName('script');
+for (var i = 0; i < scripts.length; i++){
+    var script = scripts[i];
+    if (script.type != 'text/markdown') continue;
+    var md = script.innerHTML.replace(/^\s<!--*/, '')
+        .replace(/-->\s*$/, '');
+    var markup = new Showdown.converter().makeHtml(md);
+    var slides = markup.split('<hr />');
+    for (var j = 0; j < slides.length; j++)
+      document.write('<div class=slide>' + slides[j] + '</div>');
+}
+w3c_slidy.add_listener(document.body, "touchend", w3c_slidy.mouse_button_click);
+</script><div class="slide first-slide"><p>... Your Slides in Markdown ...</p><br><br></div>
+<div style="display: block;" tabindex="0" class="toolbar"><div style="float: right; text-align: right;"><span>slide 1/1</span></div><div style="text-align: left;"><span style="color: rgb(240, 240, 240);">* </span><a title="Navigate with mouse click, space bar, Cursor Left/Right, or Pg Up and Pg Dn. Use S and B to change font size." href="http://www.w3.org/Talks/Tools/Slidy2/help/help.html">help?</a> <a title="table of contents" href="javascript:w3c_slidy.toggle_table_of_contents()">contents?</a> </div></div></body></html>
